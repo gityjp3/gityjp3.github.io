@@ -7,19 +7,22 @@
 	     <link rel="stylesheet" type="text/css" href="../css/index.css"/>
 	     <link rel="stylesheet" type="text/css" href="../css/swiper-3.3.1.min.css"/>
 	     <script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script> 
+	     <script type="text/javascript" src="../js/common.js"></script>
+	     <script src="../js/iscroll.js"></script>
 	     <script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
 	     <script src="../js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	     
-	     
+	      
 	</head>
 	<body>
-	<div class="index-wrapper">
+	<div class="container">
+		
 		<div class="in-wrap-con">
 			<header>
 				<div class="header-con w100">
 					<div class="search-con w100">
 						<div class="search-bar">
 							<a class="wei-talk" href="javascript:;"></a>
+							<a href="barcode_scan.html"><i class="iconfont er-Code">&#xe601;</i></a>
 							<form class="form-one"><input type="text" name="" class="search-input" placeholder="简约百搭欧美大牌短靴 "/></form>
 							<ul class="search-ul">
 								
@@ -332,7 +335,48 @@
 	           		</div>
 	           </div>	
 	        <div class="goods-image-box">
-	        	<div class="floor4-goods-con w100">
+		     	<footer>
+		     		<div class="footer-area">
+		     			<div class="footer-nav">
+		     				<a href="javascript:;" class="nav-item fl">
+		     					<div class="bot-nav-img">
+		     						<img src="../img/icon-home.png" alt="" />
+		     					</div>
+		     					<div class="nav-title nav-active">首页</div>
+		     				</a>
+		     			    <a href="javascript:;" class="nav-item fl">
+		     					<div class="bot-nav-img">
+		     						<img src="../img/icon-good-goods.png" alt="" />
+		     					</div>
+		     					<div class="nav-title">良品</div>
+		     				</a>
+		     				 <a href="camera.html" class="nav-item fl">
+		     					<div class="bot-nav-img">
+		     						<i class="iconfont icon-heart">&#xe621;</i>
+		     					</div>
+		     					<div class="nav-title">关注</div>
+		     				</a>
+                           <a href="javascript:;" class="nav-item fl">
+		     					<div class="bot-nav-img">
+		     						<img src="../img/icon-classify.png" alt="" />
+		     					</div>
+		     					<div class="nav-title">分类</div>
+		     				</a>
+                           <a href="javascript:;" class="nav-item fl">
+		     					<div class="bot-nav-img">
+		     						<img src="../img/icon-mine.png" alt="" />
+		     					</div>
+		     					<div class="nav-title">我的</div>
+		     				</a>
+		     			</div>
+		     		</div>
+		     		</footer>
+		     </div>
+		</div>
+	    
+	    <div class="goods-image-box" id="scroll-content">
+	        	<div class="pull">
+	        		<div id="pull-down" class="pull-g">下拉刷新！</div>
 	        		<div class="wall-goods-box">
 	        			<div class="scroll-wall-box">
 	        				<div class="goods-list">
@@ -964,43 +1008,12 @@
 	        					</a>
 	        				</div>
 	        			</div>
+
 	        		</div>
+	        	    <div id="pull-up" class="pull-g"> 上拉加载！</div>
 	        	</div>
-	        </div>   
-		     <div class="goods-image-box">
-		     	<footer>
-		     		<div class="footer-area">
-		     			<div class="footer-nav">
-		     				<a href="javascript:;" class="nav-item fl">
-		     					<div class="bot-nav-img">
-		     						<img src="../img/icon-home.png" alt="" />
-		     					</div>
-		     					<div class="nav-title nav-active">首页</div>
-		     				</a>
-		     			    <a href="javascript:;" class="nav-item fl">
-		     					<div class="bot-nav-img">
-		     						<img src="../img/icon-good-goods.png" alt="" />
-		     					</div>
-		     					<div class="nav-title">良品</div>
-		     				</a>
-                           <a href="javascript:;" class="nav-item fl">
-		     					<div class="bot-nav-img">
-		     						<img src="../img/icon-classify.png" alt="" />
-		     					</div>
-		     					<div class="nav-title">分类</div>
-		     				</a>
-                           <a href="javascript:;" class="nav-item fl">
-		     					<div class="bot-nav-img">
-		     						<img src="../img/icon-mine.png" alt="" />
-		     					</div>
-		     					<div class="nav-title">我的</div>
-		     				</a>
-		     			</div>
-		     		</div>
-		     	</footer>
-		     </div>
-		</div>
-		    
+	    </div>   
+		
 	</div>
 	</body>
 </html>
