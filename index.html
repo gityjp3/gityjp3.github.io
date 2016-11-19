@@ -1,37 +1,915 @@
-﻿<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!DOCTYPE html>
+<html lang="en">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<title>微信推广</title>
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1.0, initial-scale=1.0">
+		<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/swiper-3.3.1.jquery.min.js"></script>
+		<script src="js/swiper.animate1.0.2.min.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+			}
+			
+			body,
+			html,
+			.swiper-container {
+				height: 100%;
+				font-size: 16px;
+				font-family: "microsoft yahei";
+			}
+			
+			.swiper-wrapCon img {
+				position: absolute;
+				width: 100%;
+			}
+			
+			.swiper-wrapCon {
+				padding: 10% 0;
+				background-color: #fff;
+			}
+			
+			.swiper-pagination {
+				text-align: right;
+				color: #3ea3e4;
+			}
+			
+			.slider-img {
+				height: 90%;
+				background: url(img/blue.png);
+			}
+			
+			.slider-img-two {
+				background: url(img/yellow.png);
+			}
+			
+			.slider-img .one-img1 {
+				top: 10%;
+				left: 5%;
+				width: 90%;
+			}
+			
+			.slider-img .one-img2 {
+				top: 5%;
+				left: 5%;
+				width: 90%;
+			}
+			
+			.slider-img .one-img3 {
+				top: 3%;
+				right: 20%;
+				width: 25%;
+			}
+			
+			.slider-img .one-img4 {
+				top: 20%;
+				left: 20%;
+				width: 30%;
+			}
+			
+			.slider-img .one-img5 {
+				top: 36%;
+				left: 16%;
+				width: 45%;
+			}
+			
+			.slider-img .one-img6 {
+				top: 25%;
+				left: 14%;
+				width: 36%;
+			}
+			
+			.slider-img .one-img7 {
+				top: 22%;
+				left: 50%;
+				width: 40%;
+			}
+			
+			.slider-img .one-img8 {
+				top: 24%;
+				left: 8%;
+				width: 40%;
+			}
+			
+			.slider-img .bg {
+				bottom: 8%;
+				left: 0;
+				width: 100%;
+			}
+			
+			.slider-img .yuan {
+				bottom: 25%;
+				left: 25%;
+				width: 50%;
+			}
+			
+			.music-move {
+				position: absolute;
+				top: 0.5rem;
+				right: 0;
+				width: 3rem;
+				height: 3rem;
+				z-index: 100;
+				background: url(img/move.gif);
+				background-size: contain;
+			}
+			
+			.music-img {
+				position: fixed;
+				width: 1.8rem;
+				height: 1.8rem;
+				top: 1.1rem;
+				right: 1rem;
+				z-index: 10;
+			}
+			
+			@keyframes rotate {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			
+			.music-stop {
+				animation: none;
+			}
+			
+			.music-img img {
+				width: 100%;
+				animation: rotate 1.5s linear infinite;
+			}
+			
+			.bottom-love {
+				position: absolute;
+				bottom: 15%;
+				width: 100%;
+				text-align: center;
+				height: 2rem;
+				line-height: 2rem;
+				color: #fff;
+				font-size: 1.1rem;
+			}
+			
+			.bottom-love span {
+				background-color: #f8ceed;
+				width: 80%;
+				display: inline-block;
+				text-align: center;
+				border-radius: 10px;
+			}
+			
+			.slider-img .two-img1 {
+				width: 60%;
+				top: 3%;
+				left: 2%;
+			}
+			
+			.slider-img .two-img2 {
+				width: 45%;
+				top: 5%;
+				left: 9%;
+			}
+			
+			.slider-img-two .two-img3 {
+				width: 51%;
+				top: 0.5%;
+				left: -1%;
+			}
+			
+			.slider-img-two .two-img4 {
+				width: 10%;
+				left: 55%;
+				top: 2%;
+				animation: rotateP linear 1s infinite;
+			}
+			
+			@keyframes rotateP {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			
+			.slider-img-two .two-img5 {
+				top: 8%;
+				width: 45%;
+				right: 0;
+			}
+			
+			.slider-img-two .two-img6 {
+				top: 2%;
+				width: 25%;
+				left: 68%;
+			}
+			
+			.slider-img-two .two-img7 {
+				top: 5%;
+				width: 30%;
+				left: 68%;
+			}
+			
+			.box-info {
+				width: 35%;
+				height: 100px;
+				position: absolute;
+				left: 67%;
+				top: 12%;
+				font-size: 1.1rem;
+				line-height: 40px;
+				color: rgb(45, 116, 156);
+			}
+			
+			.slider-img-two .two-img8 {
+				width: 70%;
+				top: 35%;
+				left: 4%;
+			}
+			
+			.slider-img-two .two-img9 {
+				width: 63%;
+				top: 36.5%;
+				left: 7.4%;
+			}
+			
+			.box-info-jie {
+				position: absolute;
+				left: 20%;
+				top: 40%;
+				width: 38%;
+				height: 140px;
+				overflow-y: auto;
+				font-size: 0.9rem;
+				background-color: #fffdcf;
+			}
+			
+			.box-info-jie em {
+				color: #0082c0;
+				font-weight: 900;
+				font-style: normal;
+			}
+			
+			.slider-img-two .two-img10 {
+				width: 20%;
+				top: 31%;
+				left: 68%;
+			}
+			
+			.slider-img-two .two-img11 {
+				width: 60%;
+				bottom: 10%;
+				right: 0;
+			}
+			
+			.slider-img-two .two-img12 {
+				width: 5%;
+				left: 89%;
+				top: 47%;
+			}
+			
+			.box-info-heart {
+				position: absolute;
+				top: 32%;
+				left: 72%;
+				width: 15%;
+				font-size: 21px;
+				color: #fff;
+			}
+			
+			.slider-img-two .two-img13 {
+				width: 25%;
+				left: 10%;
+				top: 73%;
+			}
+			
+			.box-info-ren {
+				position: absolute;
+				top: 75%;
+				left: 16%;
+				width: 15%;
+				font-size: 21px;
+				color: #fff;
+			}
+			
+			.slider-img-two .two-img14 {
+				left: 56.5%;
+				top: 62.5%;
+				width: 34%;
+			}
+			
+			.box-info-say {
+				position: absolute;
+				top: 67%;
+				left: 63%;
+				font-size: 21px;
+				color: #fff;
+				width: 17%;
+			}
+			
+			.slider-img .san-white {
+				top: 90%;
+				left: 50%;
+				width: 10%;
+				margin-left: -20px;
+				animation: moveUp linear 1s infinite;
+			}
+			
+			@keyframes moveUp {
+				from {
+					top: 90%;
+				}
+				to {
+					top: 87%;
+					opacity: 0.2;
+					filter: alpha(opacity=20);
+				}
+			}
+			
+			.slider-img-three .three-img1 {
+				top: 0;
+			}
+			
+			.slider-img-three .three-img2 {
+				top: -5%;
+				width: 55%;
+				left: 17%;
+			}
+			
+			.slider-img-three .three-img3 {
+				top: 2%;
+				width: 40%;
+				left: 20%;
+			}
+			
+			.slider-img-three .lineleft {
+				top: 5%;
+				width: 55%;
+				left: 0;
+			}
+			
+			.slider-img-three .lineright {
+				top: 20%;
+				width: 55%;
+				left: 40%;
+			}
+			
+			.slider-img-three .jingyan {
+				top: 9%;
+				width: 37%;
+				left: 47%;
+			}
+			
+			.slider-img-three .work {
+				top: 6%;
+				width: 34%;
+				left: 15%;
+			}
+			
+			.slider-img-three .shuxian {
+				bottom: 0;
+				width: 0.74%;
+				left: 48%;
+			}
+			
+			.slider-img-three .samedot {
+				width: 41%;
+			}
+			
+			.slider-img-three .hengDot {
+				top: 30%;
+				left: 9%;
+			}
+			
+			.slider-img-three .hengDot1 {
+				top: 40%;
+				left: 47%;
+			}
+			
+			.slider-img-three .hengDot2 {
+				top: 58%;
+				left: 9%;
+			}
+			
+			.slider-img-three .hengDot3 {
+				top: 70%;
+				left: 47%;
+			}
+			
+			.three-box1 {
+				position: absolute;
+				top: 32%;
+				width: 44%;
+				left: 3%;
+				color: rgba(0, 0, 0, 0.7);
+			}
+			
+			.three-box1 .jingyan-time {
+				top: -20%;
+				left: 20%;
+				position: absolute;
+			}
+			
+			.colorweight {
+				color: #006CCC;
+				font-weight: 900;
+			}
+			
+			.three-box2 {
+				position: absolute;
+				left: 50%;
+				top: 37.5%;
+				line-height: 1.5rem;
+				width: 44%;
+				color: rgba(0, 0, 0, 0.7);
+			}
+			
+			.three-box3 {
+				position: absolute;
+				top: 60%;
+				width: 44%;
+				left: 4%;
+				color: rgba(0, 0, 0, 0.7);
+			}
+			
+			.three-box3 .jingyan-time {
+				left: 20%;
+				top: -35%;
+				position: absolute;
+			}
+			
+			.three-box4 {
+				position: absolute;
+				top: 71.5%;
+				left: 50%;
+				color: rgba(0, 0, 0, 0.7);
+			}
+			
+			.three-box4 .jingyan-time {
+				top: -24%;
+				position: absolute;
+				left: 0;
+			}
+			
+			.slider-img-four .four-line {
+				width: 50%;
+				left: 0;
+				top: 0;
+			}
+			
+			.slider-img-four {
+				background: url(img/yellow.png);
+			}
+			
+			.slider-img-four .one-img1 {
+				width: 83%;
+				left: 15%;
+				top: 2%;
+			}
+			
+			.slider-img-four .one-img2 {
+				width: 22%;
+				left: 40%;
+				top: 25%;
+				animation: rotate linear 5s infinite;
+			}
+			
+			.slider-img-four .five-rotate1 {
+				width: 90%;
+				left: 9%;
+			}
+			
+			.slider-img-four .four-blue {
+				width: 80%;
+				left: 15%;
+				top: -2%;
+			}
+			
+			.slider-img-four .four-zhuanye {
+				top: 2%;
+				left: 14%;
+				width: 32%;
+			}
+			
+			.slider-img-four .four-nengli {
+				top: 10%;
+				left: 42%;
+				width: 30%;
+			}
+			
+			.slider-img-four .zyEnglish {
+				top: 13%;
+				left: 4%;
+				width: 40%;
+			}
+			
+			.slider-img-four .textsame {
+				color: #0596c5;
+				left: 5%;
+				right: 5%;
+			}
+			
+			.slider-img-four .four-text1 {
+				position: absolute;
+				top: 45%;
+			}
+			
+			.slider-img-four .four-text2 {
+				position: absolute;
+				top: 53%;
+			}
+			
+			.slider-img-four .four-text3 {
+				position: absolute;
+				top: 61%;
+			}
+			
+			.slider-img-four .four-text4 {
+				position: absolute;
+				top: 69%;
+			}
+			
+			.slider-img-four .four-text5 {
+				position: absolute;
+				top: 77%;
+			}
+			
+			.slider-img-five .green {
+				top: 50%;
+				left: 34%;
+				width: 30%;
+			}
+			
+			.slider-img-five .orange {
+				top: 70%;
+				left: 14%;
+				width: 30%;
+			}
+			
+			.slider-img-five .shenghong {
+				top: 70%;
+				left: 54%;
+				width: 30%;
+			}
+			
+			.slider-img-five .yixiang1 {
+				top: 55%;
+				left: 36%;
+				width: 30%;
+				z-index: 10;
+				color: #fff;
+			}
+			
+			.slider-img-five .yixiang2 {
+				top: 75%;
+				left: 16%;
+				width: 30%;
+				z-index: 10;
+				color: #fff;
+			}
+			
+			.slider-img-five .yixiang3 {
+				top: 75%;
+				left: 56%;
+				width: 30%;
+				z-index: 10;
+				color: #fff;
+			}
+			
+			.slider-img-five .fivelogo {
+				top: 30%;
+				width: 50%;
+				left: 40%;
+				transform: skewY(-10deg);
+			}
+			
+			.slider-img-six .jiaoyu {
+				left: 20%;
+				width: 40%;
+				top: 10%;
+			}
+			
+			.slider-img-six .beijing {
+				left: 57%;
+				width: 30%;
+				top: 20%;
+			}
+			
+			.slider-img-six .line {
+				left: 0;
+				width: 57%;
+				top: 25%;
+			}
+			
+			.slider-img-six .line1 {
+				left: 55%;
+				width: 57%;
+				top: 17%;
+			}
+			
+			.slider-img-six .textsame {
+				padding-top: 9%;
+			}
+			
+			.slider-img-six strong {
+				color: rgb(1, 112, 201);
+			}
+			
+			.slider-img-seven {
+				background: url(img/blue.png);
+			}
+			
+			.slider-img-seven .top-bg {
+				top: 0;
+			}
+			
+			.slider-img-seven .fiveblue {
+				top: 4%;
+				width: 70%;
+				left: 21%;
+				animation: rotate ease 3s infinite;
+			}
+			
+			.slider-img-seven .lianxi {
+				width: 26%;
+				top: 14%;
+				left: 28%;
+			}
+			
+			.slider-img-seven .lianxiEng {
+				width: 50%;
+				top: 24%;
+				right: 0;
+			}
+			
+			.slider-img-seven .line1 {
+				width: 60%;
+				top: 23%;
+				left: 40%;
+			}
+			
+			.slider-img-seven .blue-me {
+				font-size: 3rem;
+				color: #0373f4;
+				position: absolute;
+				top: 15%;
+				left: 53%;
+				font-weight: 900;
+				font-family: "宋体";
+				font-style: italic;
+			}
+			
+			.slider-img-seven .textsame {
+				color: #fff;
+				background-color: rgba(0, 0, 0, 0.4);
+				text-align: center;
+				border-radius: 5px;
+			}
+			
+			.slider-img-seven .four-text1 {
+				top: 70%;
+			}
+			
+			.slider-img-seven .four-text2 {
+				top: 74%;
+			}
+			
+			.slider-img-seven .four-text3 {
+				top: 78%;
+			}
+			
+			.slider-img-seven .four-text4 {
+				top: 82%;
+			}
+			
+			.slider-img-seven .myweixin {
+				top: 48%;
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				background-color: none;
+			}
+			
+			.slider-img-seven .myweixin img {
+				width: 35%;
+				position: static;
+			}
+		</style>
+	</head>
 
-  <title>YLi星光-杨金苹</title>
-  <meta name="description" content="this is my first git blog!">
+	<body>
+		<section>
+			<div class="music-move"></div>
+			<div class="music-img">
+				<img class="music-btn" src="img/music.png" alt="" />
+			</div>
+			<audio id="music-audio" src="audio/audio.mp3" class="audio" loop="true" autoplay="autoplay" preload="">
+			</audio>
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+		</section>
+		<div class="swiper-container">
+			<div class="swiper-wrapper swiper-wrapCon">
+				<div class="swiper-slide slider1">
+					<div class="slider-img">
+						<img src="img/five1.png" class="one-img1 ani bg" swiper-animate-effect="rotateIn" swiper-animate-duration="2s" swiper-animate-delay="2.8s" alt="">
+						<img class="ani one-img2" swiper-animate-effect="rotateIn" swiper-animate-duration=".6s" src="img/five2.png" class="five-rotate" alt="">
+						<img class="ani one-img3" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2s" src="img/icon2.png" alt="">
+						<img class="ani one-img4" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s" src="img/myresume.png" alt="">
+						<img class="ani one-img5" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s" src="img/panel1-word.png" alt="">
+						<img class="ani one-img6" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.6s" src="img/panel1-qiuzhi.png" alt="">
+						<img class="ani one-img7" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.6s" src="img/panel1-jianli.png" alt="">
+						<img class="ani one-img8" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s" src="img/panel1-line.png" alt="">
+						<img class="ani bg" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="3s" src="img/panel1-bg.png" alt="">
+						<img src="img/yuan.png" alt="" class="ani yuan" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
+						<div class="bottom-love ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2.5s"><span>面向阳光，就不会有阴影</span></div>
+						<img class="san-white" src="img/3.png" alt="" />
+					</div>
+				</div>
+				<div class="swiper-slide slider1">
+					<div class="slider-img slider-img-two">
+						<img src="img/two-pur.png" alt="" class="two-img1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s">
+						<img class="two-img2 ani" src="img/qtww.png" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s" alt="" />
+						<img src="img/two-line4.png" alt="" class="two-img3 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+						<img src="img/two-pink.png" alt="" class="two-img4">
+						<img src="img/two-line5.png" alt="" class="two-img5 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="3s">
+						<img src="img/two-img1.png" alt="" class="two-img6 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3s">
+						<img src="img/two-img2.png" alt="" class="two-img7 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3s">
+						<div class="box-info ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.7s" swiper-animate-delay="3s">
+							<div>姓名:杨金苹</div>
+							<div>性别:女</div>
+							<div>年龄:21</div>
+						</div>
+						<img src="img/fiveblue.png" alt="" class="two-img8 ani" swiper-animate-effect="rotateIn" swiper-animate-duration="0.7s" swiper-animate-delay="2.5s">
+						<img src="img/fiveblue.png" alt="" class="two-img9 ani" swiper-animate-effect="rotateIn" swiper-animate-duration="1s" swiper-animate-delay="2.8s">
+						<div class="box-info-jie ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s">
+							<span><em>*_*</em>个人简介:主要做前端开发</span>
+							<span>本人有着一年多的前端开发经验，我喜欢前端开发这个工作，并能熟练使用HTML、CSS、Javascript，
+            		通过使用HTML5、CSS3、jQuery等实现页面开发，在工作中我会竭尽所能得把每项工作做好。有较好的沟通交流与学习能力。</span>
 
-</head>
+						</div>
+						<img src="img/two-or.png" alt="" class="two-img10 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.5s">
+						<img src="img/two-line1.png" alt="" class="two-img11 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.8s">
+						<img src="img/two-blue.png" alt="" class="two-img12 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.5s">
+						<div class="box-info-heart ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="4s">专心致志</div>
+						<img src="img/two-ligntblue.png" alt="" class="two-img13 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.5s">
+						<div class="box-info-ren ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="4s">认真勤奋</div>
+						<img src="img/two-green.png" alt="" class="two-img14 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.5s">
+						<div class="box-info-say ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="4s">爱沟通爱前端</div>
+						<img class="san-white" src="img/3.png" alt="" />
+					</div>
+				</div>
 
-<body>
+				<div class="swiper-slide slider1">
+					<div class="slider-img slider-img-four slider-img-six">
+						<img src="img/two-line4.png" class="four-line ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" alt="" />
+						<img src="img/five1.png" class="one-img1 bg ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s" alt="">
+						<img class="four-blue ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s" src="img/five2.png" swiper-animate-delay="1.5s" alt="">
+						<img class="san-white" src="img/3.png" alt="" />
+						<img src="img/jiaoyu.png" class="jiaoyu ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="3s" alt="" />
+						<img src="img/beijing.png" class="beijing ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="3s" alt="" />
+						<img src="img/panel1-line.png" class="line ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="2s" alt="" />
+						<img src="img/three-line.png" class="line1 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="2.5s" alt="" />
+						<div class="four-text1 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="3.4s">
+							<strong>毕业院校:</strong>&nbsp;河南工程学院
+						</div>
+						<div class="four-text2 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s">
+							<strong>专业:</strong>&nbsp;计算机信息管理
+						</div>
+						<div class="four-text3 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4.6s">
+							<strong>实训:</strong>&nbsp;老师带着做前端项目、假期计算机实习、学习web前端页面开发。
+						</div>
+						<div class="four-text4 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="5.2s">
+							<strong>在校活动&获奖:</strong>&nbsp;在校是社团负责人之一；获三好学生、优秀团员、国家励志奖学金。
+						</div>
+					</div>
+				</div>
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">有一种美，惊艳了时光</h1>
-     <p>---------------------------------------------------作者：杨金苹YLi星光</p>
-    </header>
-    <h1>女神降临</h1>
-    <p>愿你自己有充分的忍耐去担当，有充分单纯的心去信仰。请你相信：无论如何，生活是合理的。</p>
-      <p>每个人都是单枪匹马在闯荡险象环生的人生，一念起，风生水起。一念落，万劫不复。——夏七夕   </p>
-<img src="images/beauty.jpg" alt="" />
-<img src="images/beauty1.jpeg" alt="" style="width:90%;height: 90%"/>
-<img src="images/beauty2.jpg" alt="" />
-<img src="images/beauty3.jpeg" alt="" />
-  
-</body>
+				<div class="swiper-slide slider1">
+					<div class="slider-img slider-img-three">
+						<img src="img/three-top.png" alt="" class="three-img1 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s">
+						<img src="img/three-wang.png" alt="" class="three-img2 ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+						<img src="img/three-English.png" alt="" class="three-img3 ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
+						<img class="lineleft ani" src="img/panel1-line.png" alt="" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s" />
+						<img class="lineright ani" src="img/three-line.png" alt="" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2s" />
+						<img class="ani work" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s" src="img/three-work.png" alt="">
+						<img class="ani jingyan" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="1s" src="img/three-jingyan.png" alt="">
+						<img class="ani shuxian" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s" src="img/three-shuxian.png" alt="">
+						<img src="img/three-zong.png" alt="" class="hengDot samedot ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.4s" swiper-animate-delay="3.5s">
+						<img src="img/three-zongfan.png" alt="" class="hengDot1 samedot ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4s">
+						<img src="img/three-zong.png" alt="" class="hengDot2 samedot ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4.5s">
+						<img src="img/three-zongfan.png" alt="" class="hengDot3 samedot ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="5s">
+						<img class="san-white" src="img/3.png" alt="" />
+						<div class="three-box1 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.4s" swiper-animate-delay="3.5s">
+							<div class="jingyan-time colorweight">2014年</div>
+							<div class="jingyan-con">1.在学校跟着老师做项目:学生信息管理系统</div>
+							<div class="jingyan-text">2.用自己所学的web前端语言、数据库SQL Sever等相关知识</div>
+							<div class="jingyan-text">3.学习HTML、PS、flash等多媒体应用</div>
+						</div>
+						<div class="three-box2 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4s">
+							<div class="jingyan-time colorweight">2014-2015</div>
+							<div class="jingyan-con">在假期做一些与计算机相关的公司做实习</div>
+						</div>
+						<div class="three-box3 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="4.5s">
+							<div class="jingyan-time colorweight">2015.7-2015.9</div>
+							<div class="jingyan-con">在苏州佳士达电子有限公司</div>
+							<div class="jingyan-text">主要负责流水线上的计算机的操作</div>
+						</div>
+						<div class="three-box4 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="5s">
+							<div class="jingyan-time colorweight">2015.10-2016.9</div>
+							<div class="jingyan-con">在郑州云网科技有限公司工作</div>
+							<div class="jingyan-text">主要从事图形设计、编写代码、网站设计和程序开发等工作。</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider1">
+					<div class="slider-img slider-img-four">
+						<img src="img/two-line4.png" class="four-line ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" alt="" />
+						<img src="img/five1.png" class="one-img1 bg ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s" alt="">
+						<img class="one-img2">
+						<img class="four-blue  ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1.5s" src="img/five2.png" swiper-animate-delay="1.5s" alt="">
+						<img class="san-white" src="img/3.png" alt="" />
+						<img src="img/zhuanye.png" class="four-zhuanye ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="2s" alt="" />
+						<img src="img/nengli.png" class="four-nengli ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s" swiper-animate-delay="2s" alt="" />
+						<img src="img/zyEnglish.png" class="zyEnglish ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="2s" alt="" />
+						<div class="four-text1 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="2.8s">
+							--熟练使用:HTML5、CSS3、jQuery等语言编写程序代码
+						</div>
+						<div class="four-text2 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="3.6s">
+							--掌握:JSON、AJAX、XML等数据语言，用弹性布局做移动开发
+						</div>
+						<div class="four-text3 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4.4s">
+							--技能:会Photoshop软件，会用版本管理工具
+						</div>
+						<div class="four-text4 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="5.2s">
+							--框架:熟练运用bootstrap框架，对sass、zepto、React、Angular框架有一定的了解
+						</div>
+						<div class="four-text5 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="6s">
+							--其他能力:有较好的沟通交流、与团队协作的能力以及很好的学习、自学能力。
+						</div>
+
+					</div>
+				</div>
+
+				<div class="swiper-slide slider1">
+					<div class="slider-img slider-img-four slider-img-five">
+						<img src="img/two-line4.png" class="four-line ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" alt="" />
+						<img src="img/five1.png" class="one-img1 bg ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s" alt="">
+						<img class="four-blue ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s" src="img/five2.png" swiper-animate-delay="1.5s" alt="">
+						<img class="san-white" src="img/3.png" alt="" />
+						<img src="img/qiuzhi.png" class="four-zhuanye ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s" alt="" />
+						<img src="img/yiixang.png" class="four-nengli ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2s" alt="" />
+						<img src="img/qzyxEng.png" class="zyEnglish ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="2s" alt="" />
+						<img src="img/fivelogo.png" class="fivelogo ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="2s" swiper-animate-delay="3s" alt="" />
+						<div class="four-text1 yixiang1 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
+							web前端开发
+						</div>
+						<div class="four-text2 yixiang2 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="4s">
+							前端移动开发
+						</div>
+						<div class="four-text3 yixiang3 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="4.5s">
+							微场景开发等
+						</div>
+						<img src="img/green.png" class="green ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.4s" swiper-animate-delay="2.5s" alt="" />
+						<img src="img/two-or.png" class="orange ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.4s" swiper-animate-delay="2.5s" alt="" alt="" />
+						<img src="img/shenghong.png" class="shenghong ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.4s" swiper-animate-delay="2.5s" alt="" alt="" />
+					</div>
+				</div>
+
+				<div class="swiper-slide slider1">
+					<div class="slider-img slider-img-four slider-img-seven">
+						<img src="img/top-bg.png" class="top-bg ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" alt="" />
+						<img src="img/two-line4.png" class="four-line ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s" alt="" />
+						<img src="img/five1.png" class="one-img1 bg ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s" alt="">
+						<img class="four-blue fiveblue" src="img/five2.png" alt="">
+						<img class="san-white" src="img/3.png" alt="" />
+						<img src="img/lianxi.png" class="lianxi ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2s" alt="" />
+						<img src="img/lianxiEng.png" class="lianxiEng ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2.5s" alt="" />
+						<img src="img/three-line.png" class="line1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3s" alt="" />
+						<span class="blue-me ani" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="3s">我</span>
+						<div class="myweixin ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
+							<img src="img/weixin.png" alt="" />
+						</div>
+						<div class="four-text1 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="2.8s">
+							电话:&nbsp;15138679440
+						</div>
+						<div class="four-text2 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="3.6s">
+							QQ:&nbsp;1728483517
+						</div>
+						<div class="four-text3 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4.4s">
+							微信:&nbsp;ping1728483517
+						</div>
+						<div class="four-text4 textsame ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="5.2s">
+							邮箱:&nbsp;yangjinpingchn@163.com
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="swiper-pagination"></div>
+		</div>
+	</body>
+
 </html>
